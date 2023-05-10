@@ -1,0 +1,16 @@
+import { Outlet } from 'react-router-dom';
+import './App.css';
+import Footer from './shared/Footer';
+import Header from './shared/Header';
+
+function App() {
+  return (
+    <div className="">
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;

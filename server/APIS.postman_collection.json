@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "bc94f4bd-cbb3-4737-b4b5-165e7fb347f8",
+		"name": "MOVIES APIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27184835"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"ehab mohamed\",\r\n    \"password\" : \"123456789\",\r\n    \"email\" : \"ehab@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"12345678\",\r\n    \"email\": \"admin@admin.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Add Appointment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Fromm\" : \"Shobra\",\r\n    \"Too\" : \"Helwan\",\r\n    \"Ticket_price\" : \"80\",\r\n    \"day_and_time\" : \"12:00 - 2:00\",\r\n    \"max_num_trav\" : \"10\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/create_app",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"create_app"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Fromm\":\"Cairo\",\r\n    \"Too\":\"Elmassara\",\r\n    \"Ticket_price\":\"250\",\r\n    \"day_and_time\":\"3:00 - 6:00\",\r\n    \"max_num_trav\":\"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/update_app/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"update_app",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Appointment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/delete_app/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"delete_app",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"bebo mohamed\",\r\n    \"email\" : \"bebo@gmail.com\",\r\n    \"password\" : \"123456789\",\r\n    \"phone\" : \"01113879347\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/create_user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"create_user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"bebo ali\",\r\n    \"email\" : \"bebo@gmail.com\",\r\n    \"password\" : \"123456789\",\r\n    \"phone\" : \"01777777777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/update_user/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"update_user",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7000/appointment/delete_user/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"delete_user",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Bus",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"busNumber\":\"3\",\r\n    \"seatsBooked\":\"9\",\r\n    \"status\":\"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/create_bus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"create_bus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bus",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"busNumber\":\"2\",\r\n    \"seatsBooked\":\"12\",\r\n    \"status\":\"inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/update_bus/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"update_bus",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bus",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7000/appointment/delete_bus/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"delete_bus",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept or Decline",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : \"Rejected\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/update_request/28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"update_request",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search for empty Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/search_status/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"search_status",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Traveler Appointments req",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "role",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "token",
+								"value": "113c8cd3a234b0f95ef0d400fe462997",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:7000/appointment/admin_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"admin_list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Filter Appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/appointment/user_filter/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"user_filter",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Appointment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "dabc4f34efe9b89c2c51d4d2500b4650",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointment_id\" : 1,\r\n    \"request\" : \"Please, want appointment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7000/appointment/request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"appointment",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show History",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,9 @@
+.travelers-index
+{
+    width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
