@@ -1,8 +1,8 @@
-Bus-Booking
+# Bus-Booking
 
 Bus Booking project using Node.js/Express.js for backend & React.js for frontend and mysql database
 
-This website will include the following features :
+## This website will include the following features :
 
 Separate User Interfaces for Users, Admins.
 
@@ -14,7 +14,7 @@ Seats Availability Checking.
 
 Manage Requests and User from the Admin Panel.
 
-The Tools and Technologies used :
+## The Tools and Technologies used :
 
 mysql
 
@@ -36,7 +36,7 @@ cd server
 
 npm install
 
-Contact
+## Contact
 
 Ahmed Gamal - ahmedgamal96386@gmail.com
 
