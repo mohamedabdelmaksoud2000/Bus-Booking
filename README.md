@@ -24,7 +24,7 @@ React
 
 Node
 
-Available Scripts
+## Available Scripts
 
 cd client
 
